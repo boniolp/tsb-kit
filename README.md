@@ -1,5 +1,11 @@
 <h1 align="center">TSB-kit</h1>
 <h2 align="center">Univariate Time-Series Anomaly Detection algorithms from TSB-UAD benchmark</h2>
+<div align="center">
+<p>
+<img alt="PyPI - Downloads" src="https://pepy.tech/badge/tsb_kit"> <img alt="PyPI" src="https://img.shields.io/pypi/v/tsb-kit"> <img alt="GitHub issues" src="https://img.shields.io/github/issues/boniolp/tsb-kit"> <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/tsb-kit">
+</p>
+</div>
+
 
 TSB-kit is a library of univariate time-series anomaly detection methods from the [TSB-UAD benchmark](https://github.com/TheDatumOrg/TSB-UAD). Overall, TSB-kit
 contains 13 anomaly detection methods, and 15 evaluation measures. This is a joint initiative between Inria, Ecole Normale Supérieure, Ohio State University and Université Paris Cité.
