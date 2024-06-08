@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.patches as mpatches 
 import matplotlib.pyplot as plt
 
-from .utils.metrics import metricor
+from ..utils.metrics import metricor
 
 def plotFig(data, label, score, slidingWindow, fileName, modelName, plotRange=None):
     grader = metricor()
