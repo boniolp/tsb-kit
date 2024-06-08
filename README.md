@@ -1,5 +1,5 @@
 <p align="center">
-<img width="200" src="./doc/logo-tsb-kit.png"/>
+<img width="300" src="./doc/logo-tsb-kit.png"/>
 </p>
 
 <h1 align="center">TSB-kit</h1>
