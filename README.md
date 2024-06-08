@@ -102,6 +102,10 @@ pip install .
 
 We use 13 anomaly detection methods proposed for univariate time series. the following table lists and describes the methods considered in our benchmark:
 
+<p align="center">
+<img width="1000" src="./doc/taxonomy_short.png"/>
+</p>
+
 | Anomaly Detection Method    | Description|
 |:--|:---------:|
 |Isolation Forest (IForest) | This method constructs the binary tree based on the space splitting and the nodes with shorter path lengths to the root are more likely to be anomalies. |
