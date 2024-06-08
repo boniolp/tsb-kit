@@ -12,7 +12,7 @@
 
 
 TSB-kit is a library of univariate time-series anomaly detection methods from the [TSB-UAD benchmark](https://github.com/TheDatumOrg/TSB-UAD). Overall, TSB-kit
-contains 13 anomaly detection methods, and 15 evaluation measures. This is a joint initiative between Inria, Ecole Normale Supérieure, Ohio State University and Université Paris Cité.
+contains 13 anomaly detection methods, and 15 evaluation measures.
 If you use TSB-kit in your project or research, cite the following two papers:
 
 * [VLDB 2022a](https://www.paparrizos.org/papers/PaparrizosVLDB22a.pdf)
