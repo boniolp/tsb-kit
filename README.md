@@ -100,6 +100,14 @@ conda activate tsb-kit
 
 4. Install TSB-kit:
 
+You can install TSB-kit with pip.
+
+```
+pip install tsb-kit
+```
+
+Please note that NormA and Series2Graph are not available on the pip package. To use them, please unlock the corresponding zip files and install the package locally:
+
 ```
 pip install .
 ```
