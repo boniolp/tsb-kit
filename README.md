@@ -1,3 +1,7 @@
+<p align="center">
+<img width="200" src="./doc/logo-tsb-kit.png"/>
+</p>
+
 <h1 align="center">TSB-kit</h1>
 <h2 align="center">Univariate Time-Series Anomaly Detection algorithms from TSB-UAD benchmark</h2>
 <div align="center">
