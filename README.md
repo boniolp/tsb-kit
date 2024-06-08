@@ -91,7 +91,7 @@ git clone https://github.com/boniolp/tsb-kit.git
 cd tsb-kit/
 ```
 
-3. Create and activate a conda-environment 'TSB'.
+3. Create and activate a conda-environment 'tsb-kit'.
 
 ```bash
 conda env create --file environment.yml
