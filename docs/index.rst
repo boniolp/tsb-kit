@@ -123,3 +123,59 @@ We depicts below a code snippet demonstrating how to use one anomaly detector (i
    VUS_PR : 0.8858037295594041
    Affiliation_Precision : 0.9630674176380548
    Affiliation_Recall : 0.9809813654809071
+
+
+License
+^^^^^^^
+
+The project is licensed under the `MIT license <https://mit-license.org>`_.
+
+If you use TSB-kit in your project or research, please cite the following papers:
+
+   TSB-UAD: An End-to-End Benchmark Suite for Univariate Time-Series Anomaly Detection
+   John Paparrizos, Yuhao Kang, Paul Boniol, Ruey Tsay, Themis Palpanas, and Michael Franklin.
+   Proceedings of the VLDB Endowment (PVLDB 2022) Journal, Volume 15, pages 1697–1711
+
+   Volume Under the Surface: A New Accuracy Evaluation Measure for Time-Series Anomaly Detection
+   John Paparrizos, Paul Boniol, Themis Palpanas, Ruey Tsay, Aaron Elmore, and Michael Franklin.
+   Proceedings of the VLDB Endowment (PVLDB 2022) Journal, Volume 15, pages 2774‑2787
+
+You can use the following BibTeX entries:
+
+.. code-block:: bibtex
+
+   @article{paparrizos2022tsb,
+      title={Tsb-uad: an end-to-end benchmark suite for univariate time-series anomaly detection},
+      author={Paparrizos, John and Kang, Yuhao and Boniol, Paul and Tsay, Ruey S and Palpanas, Themis and Franklin, Michael J},
+      journal={Proceedings of the VLDB Endowment},
+      volume={15},
+      number={8},
+      pages={1697--1711},
+      year={2022},
+      publisher={VLDB Endowment}
+   }
+
+.. code-block:: bibtex
+
+   @article{paparrizos2022volume,
+      title={{Volume Under the Surface: A New Accuracy Evaluation Measure for Time-Series Anomaly Detection}},
+      author={Paparrizos, John and Boniol, Paul and Palpanas, Themis and Tsay, Ruey S and Elmore, Aaron and Franklin, Michael J},
+      journal={Proceedings of the VLDB Endowment},
+      volume={15},
+      number={11},
+      pages={2774--2787},
+      year={2022},
+      publisher={VLDB Endowment}
+   }
+
+Contributors
+^^^^^^^^^^^^
+
+- Paul Boniol (Inria, ENS)
+- John Paparrizos (Ohio State University)
+- Emmanouil Sylligardos (Inria, ENS)
+- Yuhao Kang (University of Chicago)
+- Alex Wu (University of Chicago)
+- Teja Bogireddy (University of Chicago)
+- Themis Palpanas (Université Paris Cité)
+
