@@ -2,7 +2,7 @@
 
 Recent advances in data collection technology, accompanied by the ever-rising volume and velocity of streaming data, underscore the vital need for time-series analytics. In this regard, time-series anomaly detection has been an important task, entailing various applications in fields such as cyber security, financial markets, and health care. While traditional literature on anomaly detection is centered on statistical measures, the increasing number of machine learning algorithms in recent years call for a structured, general characterization of the research methods for time-series anomaly detection. 
 
-The objective of TSB-kit is to provide a simple and easy implementations of the main methods proposed in the literature. To do so, we porpose a novel process-centric taxonomy in the time series context.
+The objective of TSB-kit is to provide simple and easy implementations of the main methods proposed in the literature. To do so, we porpose a novel process-centric taxonomy in the time series context and pick representatives for each categories. 
 
 ## On the Definition of Anomalies in Time Series
 
