@@ -1,5 +1,5 @@
 <p align="center">
-<img width="300" src="./doc/logo-tsb-kit.png"/>
+<img width="300" src="./images/logo-tsb-kit.png"/>
 </p>
 <h2 align="center">Univariate Time-Series Anomaly Detection algorithms from TSB-UAD benchmark</h2>
 <div align="center">
