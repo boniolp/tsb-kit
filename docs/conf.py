@@ -32,7 +32,7 @@ templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 autodoc_mock_imports = ['numpy','matplotlib','pandas','arch','tsfresh'
-    'hurst','tslearn','cython','scikit-learn'
+    'hurst','tslearn','cython','scikit-learn','tqdm','scipy',
     'sklearn','stumpy','tensorflow','networkx']
 
 
