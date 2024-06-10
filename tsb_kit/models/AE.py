@@ -5,15 +5,48 @@ from tensorflow.keras.callbacks import EarlyStopping
 from tensorflow.keras import layers
 
 
-class AE_MLP2:  
-    def __init__(self, slidingWindow = 100,  contamination = 0.1, epochs = 10, verbose=0):
+class AE_MLP2:
+    """
+    Implementation of AE_MLP2
+    
+    Parameters
+    ----------
+    slidingwindow : int
+        Subsequence length to analyze.
+    epochs : int, (default=10)
+        Number of epochs for the training phase
+
+    Attributes
+    ----------
+    decision_scores_ : numpy array of shape (n_samples - subsequence_length,)
+        The anomaly score.
+        The higher, the more abnormal. Anomalies tend to have higher
+        scores. This value is available once the detector is
+        fitted.
+    """  
+    def __init__(self, slidingWindow = 100, epochs = 10, verbose=0):
         self.slidingWindow = slidingWindow
-        self.contamination = contamination
         self.epochs = epochs
         self.verbose = verbose
         self.model_name = 'AE_MLP2'
 
     def fit(self, X_clean, X_dirty, ratio = 0.15):
+        """Fit detector.
+        
+        Parameters
+        ----------
+        X_clean : numpy array of shape (n_samples, )
+            The input training samples.
+        X_dirty : numpy array of shape (n_samples, )
+            The input testing samples.
+        ratio : flaot, ([0,1])
+            The ratio for the train validation split
+        
+        Returns
+        -------
+        self : object
+            Fitted estimator.
+        """
 
         TIME_STEPS =  self.slidingWindow
         epochs = self.epochs

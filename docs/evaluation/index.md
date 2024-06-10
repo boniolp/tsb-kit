@@ -1,10 +1,7 @@
 # Evaluation
 
 ```{toctree}
-
----
-maxdepth: 2
----
+:maxdepth: 2
 
 Threshold
 AUC

@@ -1,9 +1,9 @@
 ![icon](../../images/method_icons/clustering.png "icon")
 # Clustering-based methods
 
-## Norma
+## NormA
 
-This method identifies the normal pattern based on clustering and calculates each point's effective distance to the normal pattern.
+NormA [Boniol and Linardi et al. 2021] is a clustering-based algorithm that summarizes the time series with a weighted set of sub-sequences. The normal set (weighted collection of sub-sequences to feature the training dataset) results from a clustering algorithm (Hierarchical), and the weights are derived from cluster properties (cardinality, extra-distance clustering, time coverage).
 
 ### Example
 
@@ -65,9 +65,22 @@ Affiliation_Recall : 1.0
 ```
 ![Result](../../images/method_results/NORMA.png "NormA Result")
 
+### References
+
+[Boniol and Linardi et al. 2021] P. Boniol, M. Linardi, F. Roncallo, T. Palpanas, M. Meftah, and E. Remy. Mar. 2021. Unsupervised and scalable subsequence anomaly detection in large data series. The VLDB Journal.
+
 ## SAND
 
-This method identifies the normal pattern based on clustering updated through arriving batches (i.e., subsequences) and calculates each point's effective distance to the normal pattern. This method can be used either online and offline.
+SAND [Boniol and Paparrizos et al. 2021] is a clustering-based algorithm, and an adaptation of NormA for streaming time series. This method can be used either online and offline (it corresponds to set the inital batch to the length of the time series).
+This method identifies the normal pattern based on clustering updated through arriving batches (i.e., subsequences) and calculates each point's effective distance to the normal pattern.
+
+Please note that some functions of SAND are using Numba. Thus, means that the execution time might be slower for the first run.
+
+```{eval-rst}  
+.. autoclass:: tsb_kit.models.sand.SAND
+    :members:
+
+```
 
 ### Example with Offline mode (static time series)
 
@@ -187,3 +200,7 @@ Affiliation_Precision : 0.9776035535846139
 Affiliation_Recall : 0.9999950659680077
 ```
 ![Result](../../images/method_results/SAND-online.png "SAND (online) Result")
+
+### References
+
+[Boniol and Paparrizos et al. 2021] P. Boniol, J. Paparrizos, T. Palpanas, and M. J. Franklin. 2021. Sand: streaming subsequence anomaly detection. PVLDB, 14(10): 1717–1729.

@@ -3,7 +3,16 @@
 
 ## Long Short-Term Memory Anomaly Detection (LSTM)
 
-This method, called LSTM-AD, build a non-linear relationship between current and previous time series (using Long-Short-Term-Memory cells), and the outliers are detected by the deviation between the predicted and actual values.
+Long Short-Term Memory (LSTM) [Hochreiter and Schmidhuber 1997] network has been demonstrated to be particularly efficient in learning inner features for sub-sequences classification or time series forecasting. Such a model can also be used for anomaly detection purposes [Filonov et al. 2016, Malhotra et al. 2015]. 
+The two latter papers' principle is as follows: A stacked LSTM model is trained on *normal* parts of the data. The objective is to predict the following point or the subsequence using the previous ones. Consequently, the model will be trained to forecast a healthy state of the time series, and, therefore, will fail to forecast when it will encounter an anomaly.  
+
+The implementation of TSB-kit corresponds to LSTM-AD [Malhotra et al. 2015].
+
+```{eval-rst}  
+.. autoclass:: tsb_kit.models.lstm.lstm
+    :members:
+
+```
 
 ### Example
 
@@ -71,9 +80,26 @@ Affiliation_Recall : 0.9836496679878174
 ```
 ![Result](../../images/method_results/LSTM.png "AE Result")
 
+### References
+
+[Hochreiter and Schmidhuber 1997] S. Hochreiter and J. Schmidhuber. Nov. 1997. Long short-term memory. Neural Comput., 9(8): 1735–1780.
+
+[Filonov et al. 2016] P. Filonov, A. Lavrentyev, and A. Vorontsov. 2016. Multivariate industrial time series with cyber-attack simulation: Fault detection using an lstm-based predictive data model. arXiv preprint arXiv:1612.06676.
+
+[Malhotra et al. 2015] P. Malhotra, L. Vig, G. Shroff, P. Agarwal, et al. 2015. Long short term memory networks for anomaly detection in time series. In Esann, volume 2015, p. 89.
+
+
+
+
 ## Concolutional Neural Network-based Anomaly Detection (CNN)
 
-This method, called DeepAnt, build a non-linear relationship between current and previous time series (using convolutional Neural Network), and the outliers are detected by the deviation between the predicted and actual values.
+This method, called DeepAnt [Munir et al. 2019], is a forecasting-based approach that build a non-linear relationship between current and previous time series points or subsequences (using convolutional Neural Network). The outliers are detected by the deviation between the predicted and actual values.
+
+```{eval-rst}  
+.. autoclass:: tsb_kit.models.cnn.cnn
+    :members:
+
+```
 
 ### Example
 
@@ -140,3 +166,7 @@ Affiliation_Precision : 0.9128891170124862
 Affiliation_Recall : 0.9900155246934222
 ```
 ![Result](../../images/method_results/CNN.png "CNN Result")
+
+### References
+
+[Munir et al. 2019] M. Munir, S. A. Siddiqui, A. Dengel, and S. Ahmed. 2019. DeepAnT: A Deep Learning Approach for Unsupervised Anomaly Detection in Time Series. 7: 1991–2005. ISSN 2169-3536. DOI:10.1109/ACCESS.2018.2886457.

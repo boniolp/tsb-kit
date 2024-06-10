@@ -4,7 +4,9 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
 import sphinx_rtd_theme
-
+import os
+import sys
+sys.path.insert(0, os.path.abspath('..'))
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
@@ -43,6 +45,8 @@ html_logo = '../images/logo-tsb-kit.png'
 napoleon_google_docstring = False
 napoleon_numpy_docstring = True
 napoleon_preprocess_types = True
+
+numpydoc_show_class_members = False
 
 # -- myst_parser settings ----------------------------------------------------
 myst_heading_anchors = 3

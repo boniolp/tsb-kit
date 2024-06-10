@@ -3,7 +3,17 @@
 
 ## AutoEncoder (AE)
 
-This method projects data to the lower-dimensional latent space and reconstructs the data, and outliers are expected to have more evident reconstruction deviation.
+Autoencoder is a type of artificial neural network used to learn to reconstruct the dataset given as input using a smaller encoding size to avoid identity reconstruction. As a general idea, the autoencoder will try to learn the best latent representation (also called encoding) using a reconstruction loss. Therefore, it will learn to compress the dataset into a shorter code and then uncompress it into a dataset that closely matches the original. 
+
+The reconstruction error can be used as an anomalous score for the specific anomaly detection task. As the model is trained on the non-anomalous subsequence of the time series (or very few anomalous subsequence), it is optimized to reconstruct the normal subsequences. Therefore, all the subsequences far from the training set will have a bigger reconstruction error.
+
+As autoencoder has been a popular method in the recent decade, many anomaly detection algorithms are based on autoencoder algorithms' implementation. For TSB-kit autoencoder implementation, we use a simple encoder with two consecutive dense layers (32 and 16 neurons respectivelly) for the encoder and the decoder.
+
+```{eval-rst}  
+.. autoclass:: tsb_kit.models.AE.AE_MLP2
+    :members:
+
+```
 
 ### Example
 

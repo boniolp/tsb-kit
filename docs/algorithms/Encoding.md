@@ -3,7 +3,16 @@
 
 ## Principal Component Analysis-based Anomaly Detection (PCA)
 
-This method projects data to a lower-dimensional hyperplane, and data points with a significant distance from this plane can be identified as outliers.
+The first encoding-based approach is to encode and represent the time series with its principal components. Principal Components Analysis (PCA) [Snyder and Withers 1983] investigates the major components of the time series that contribute the most to the covariance structure. The anomaly score is measured by the sub-sequences distance from 0 along the principal components weighted by their eigenvalues. Please see [Aggarwal 2015] for mre details.
+
+
+The TSB-kit implementation of PCA is adapted from [PyOD implementation](https://pyod.readthedocs.io/en/latest/) [Zhao et al. 2019].
+
+```{eval-rst}  
+.. autoclass:: tsb_kit.models.pca.PCA
+    :members:
+
+```
 
 ### Example
 
@@ -68,9 +77,25 @@ Affiliation_Recall : 0.9982808225194953
 ```
 ![Result](../../images/method_results/PCA.png "PCA Result")
 
+### References
+
+[Aggarwal 2015] Charu C Aggarwal. Outlier analysis. In Data mining, 75–79. Springer, 2015.
+
+[Zhao et al. 2019] Zhao, Yue, Zain Nasrullah and Zheng Li. PyOD: A Python Toolbox for Scalable Outlier Detection. J. Mach. Learn. Res. 20,2019.
+
+[Snyder and Withers 1983] 
+
 ## Polynomial Approximation (POLY)
 
-This method build a non-linear relationship between current and previous time series (using polynomial decomposition), and the outliers are detected by the deviation between the predicted and actual values.
+
+POLY is a encoding-based anoamly detection methods that aims to detect pointwise anomalies using polynomial approximation [Li et al. 2007]. A polynomial of certain degree and window size is fitted to the given time series dataset. A GARCH [Bollerslev 1986] method is ran on the difference betweeen the approximation and the true value of the dataset to estimate the volatitilies of each point. A score is derived on each point based on the estimated volatitilies and residual to measure the normality of each point. An alternative method that only considers absolute difference is also used.
+
+
+```{eval-rst}  
+.. autoclass:: tsb_kit.models.poly.POLY
+    :members:
+
+```
 
 ### Example
 
@@ -136,3 +161,9 @@ Affiliation_Precision : 0.9810555530560522
 Affiliation_Recall : 0.9999934905686477
 ```
 ![Result](../../images/method_results/POLY.png "POLY Result")
+
+### References
+
+[Li et al. 2007] Z. Li, H. Ma, and Y. Mei. 2007. A unifying method for outlier and change detection from data streams based on local polynomial fitting. In Z.-H. Zhou, H. Li, and Q. Yang, eds., Advances in Knowledge Discovery and Data Mining, pp. 150–161. Springer Berlin Heidelberg, Berlin, Heidelberg. ISBN 978-3-540-71701-0.
+
+[Bollerslev 1986] Tim Bollerslev, Generalized autoregressive conditional heteroskedasticity, Journal of Econometrics, Volume 31, Issue 3, 1986, ISSN 0304-4076.

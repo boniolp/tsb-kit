@@ -4,7 +4,17 @@
 
 ## Isolation Forest
 
-This method constructs the binary tree based on the space splitting and the nodes with shorter path lengths to the root are more likely to be anomalies.
+Isolation Forest (IForest) is a density-based and the most famous tree-based approach for anomaly detection. IForest tries to isolate the outlier from the rest of the normal points of subsequences [Liu et al. 2008].
+The key idea remains on the fact that, in a normal distribution, anomalies are more likely to be isolated (i.e., requiring fewer random partitions to be isolated) than normal instances. 
+If we assume the latter statement, we only have to produce a partitioning process that indicates well the isolation degree (i.e., anomalous degree) of instances.
+
+The TSB-kit implementation of IForest is a wrapper of [Scikit-learn implementation of IsolationForest](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html).
+
+```{eval-rst}  
+.. autoclass:: tsb_kit.models.iforest.IForest
+    :members:
+
+```
 
 ### Example
 
@@ -71,3 +81,6 @@ Affiliation_Recall : 0.9809813654809071
 ```
 ![Result](../../images/method_results/IForest.png "Iforest Result")
 
+### References
+
+[Liu et al. 2008] F. T. Liu, K. M. Ting, and Z.-H. Zhou. 2008. Isolation Forest. In Proceedings of the International Conference on Data Mining (ICDM), pp. 413–422. IEEE. ISBN 978-0-7695-3502-9. DOI:10.1109/ICDM.2008.17.

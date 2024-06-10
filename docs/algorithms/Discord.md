@@ -3,7 +3,17 @@
 
 ## Matrix Profile
 
-This method calculates as anomaly the subsequence with the most significant 1-Nearest-Neighbor (1-NN) distance.
+Matrix Profile [Yeh et al. 2016, Zhu et al. 2016] is a discord-based method that represents time series as a matrix of closest neighbor distances. Compared to its predecessor, Matrix Profile proposed a new metadata time series computed effectively, capable of providing various valuable details about the examined time series, such as discords.
+
+The MatrixProfile is computed using Mueen’s ultra-fast Algorithm for Similarity Search (MASS) [Mueen et al. 2017] that requires just O(nlog(n)) time by exploiting the Fast Fourier Transform (FFT) to calculate the dot products between the query and all the sub-sequences of the time series. Once these metadata are generated, retrieving the Top-k discord is possible by considering the maximum value of the Matrix Profile and ordering it, excluding the trivial matches (overlapping sub-sequences). Retrieving the sub-sequences with the shortest distance to their nearest neighbor (called motifs) is also possible. These sub-sequences correspond to a recurrent motif in the time series and can be useful in the anomaly search. 
+
+The TSB-kit implementation of MatrixProfile is wrapper of [Stumpy](https://stumpy.readthedocs.io/en/latest/index.html) implementation.
+
+```{eval-rst}  
+.. autoclass:: tsb_kit.models.matrix_profile.MatrixProfile
+    :members:
+
+```
 
 ### Example
 
@@ -65,9 +75,27 @@ Affiliation_Recall : 0.9720951147963328
 ```
 ![Result](../../images/method_results/MP.png "MatrixProfile Result")
 
+### References
+
+[Yeh et al. 2016] C. Yeh, Y. Zhu, L. Ulanova, N. Begum, Y. Ding, H. Dau, D. Silva, A. Mueen, and E. Keogh. 2016a. Matrix profile I: all pairs similarity joins for time series: A unifying view that includes motifs, discords and shapelets. In ICDM.
+
+[Zhu et al. 2016] Y. Zhu, Z. Zimmerman, N. S. Senobari, C.-C. M. Yeh, G. Funning, A. Mueen, P. Brisk, and E. Keogh. 2016a. Matrix profile ii: Exploiting a novel algorithm and gpus to break the one hundred million barrier for time series motifs and joins. In 2016 IEEE 16th international conference on data mining (ICDM), pp. 739–748. IEEE.
+
+[Mueen et al. 2017] A. Mueen, Y. Zhu, M. Yeh, K. Kamgar, K. Viswanathan, C. Gupta, and E. Keogh, August 2017. The fastest similarity search algorithm for time series subsequences under euclidean distance.
+
 ## DAMP
 
-This method is a scalable matrix Profile-based approach proposed to solves the twin-freak problem.
+DAMP [Lu et al. 2022] is a discord-based method, and scalable matrix Profile-based approach proposed to solves the problem of multiple similar anomalies. Moreover, is able to work on online settings, and scale to fast-arriving streams. 
+
+The TSB-kit implementation of the DAMP algorithm follows the descripition in the original paper [Lu et al. 2022](https://www.cs.ucr.edu/~eamonn/DAMP_long_version.pdf).
+The TSB-kit implementation is adapted from [TimeEval](https://github.com/HPI-Information-Systems/TimeEval-algorithms/blob/main/damp/damp/damp.py).
+
+
+```{eval-rst}  
+.. autoclass:: tsb_kit.models.damp.DAMP
+    :members:
+
+```
 
 ### Example
 
@@ -128,3 +156,7 @@ Affiliation_Precision : 0.6162807136520358
 Affiliation_Recall : 0.9999402806808003
 ```
 ![Result](../../images/method_results/DAMP.png "DAMP Result")
+
+### References
+
+[Lu et al. 2022] Y. Lu, R. Wu, A. Mueen, M. A. Zuluaga, and E. Keogh. 2022. Matrix profile xxiv: scaling time series anomaly detection to trillions of datapoints and ultra-fast arriving data streams. In SIGKDD, pp. 1173–1182.

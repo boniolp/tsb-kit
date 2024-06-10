@@ -3,7 +3,8 @@
 
 ## Series2Graph
 
-This method is converting the time series into a directed graph reprenting the evolution of subsequences in time. The anomalies are detected using the weight and the degree of the nodes and edges respectively.
+Series2Graph [Boniol and Palpanas 2020] is a graph-based appraoch for time seires anomaly detection. It converts the time series into a directed graph with nodes representing the usual types of subsequences and edges representing the frequency of the transitions between types of subsequences. Moreover, an extension of Series2Graph proposed in the literature, named DADS [Schneider et al. 2021], proposes a distributed implementation and, therefore, a much more scalable method for large time series.
+
 
 ### Example
 
@@ -66,3 +67,9 @@ Affiliation_Precision : 0.9282931033407741
 Affiliation_Recall : 0.9989565215573869
 ```
 ![Result](../../images/method_results/Series2Graph.png "Series2Graph Result")
+
+### References
+
+[Boniol and Palpanas 2020] Paul Boniol and Themis Palpanas. 2020. Series2Graph: graph-based subsequence anomaly detection for time series. Proc. VLDB Endow. 13, 12
+
+[Schneider et al. 2021] J. Schneider, P. Wenig, and T. Papenbrock. 2021. Distributed detection of sequential anomalies in univariate time series. The VLDB Journal, 30(4): 579–602
