@@ -1,6 +1,9 @@
+![icon](../../images/method_icons/clustering.png "icon")
 # Clustering-based methods
 
 ## Norma
+
+This method identifies the normal pattern based on clustering and calculates each point's effective distance to the normal pattern.
 
 ### Example
 
@@ -21,6 +24,9 @@ name = filepath.split('/')[-1]
 
 data = df[:,0].astype(float)
 label = df[:,1].astype(int)
+
+#Pre-processing
+slidingWindow = find_length(data)
 
 # Run NormA
 modelName='NORMA'
@@ -61,6 +67,8 @@ Affiliation_Recall : 1.0
 
 ## SAND
 
+This method identifies the normal pattern based on clustering updated through arriving batches (i.e., subsequences) and calculates each point's effective distance to the normal pattern. This method can be used either online and offline.
+
 ### Example with Offline mode (static time series)
 
 ```python
@@ -80,6 +88,9 @@ name = filepath.split('/')[-1]
 
 data = df[:,0].astype(float)
 label = df[:,1].astype(int)
+
+#Pre-processing
+slidingWindow = find_length(data)
 
 # Run SAND (offline)
 modelName='SAND (offline)'
@@ -136,6 +147,9 @@ name = filepath.split('/')[-1]
 
 data = df[:,0].astype(float)
 label = df[:,1].astype(int)
+
+#Pre-processing
+slidingWindow = find_length(data)
 
 # Run SAND (online)
 modelName='SAND (online)'

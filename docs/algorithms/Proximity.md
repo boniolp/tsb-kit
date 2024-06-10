@@ -1,6 +1,9 @@
+![icon](../../images/method_icons/proximity.png "icon")
 # Proximity-based methods
 
 ## Local Outlier Factor (LOF)
+
+This method computes the ratio of the neighboring density to the local density.
 
 ### Example
 

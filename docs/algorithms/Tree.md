@@ -1,7 +1,10 @@
+![icon](../../images/method_icons/tree.png "icon")
 # Tree-based methods
 
 
 ## Isolation Forest
+
+This method constructs the binary tree based on the space splitting and the nodes with shorter path lengths to the root are more likely to be anomalies.
 
 ### Example
 
@@ -66,5 +69,5 @@ VUS_PR : 0.8858037295594041
 Affiliation_Precision : 0.9630674176380548
 Affiliation_Recall : 0.9809813654809071
 ```
-![Result](../../images/method_results/iforest.png "Iforest Result")
+![Result](../../images/method_results/IForest.png "Iforest Result")
 

@@ -1,6 +1,9 @@
+![icon](../../images/method_icons/graph.png "icon")
 # Graph-based methods
 
 ## Series2Graph
+
+This method is converting the time series into a directed graph reprenting the evolution of subsequences in time. The anomalies are detected using the weight and the degree of the nodes and edges respectively.
 
 ### Example
 
@@ -21,6 +24,9 @@ name = filepath.split('/')[-1]
 
 data = df[:,0].astype(float)
 label = df[:,1].astype(int)
+
+#Pre-processing
+slidingWindow = find_length(data)
 
 # Run Series2Graph
 modelName='Series2Graph'

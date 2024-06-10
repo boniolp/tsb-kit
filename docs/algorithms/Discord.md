@@ -1,6 +1,9 @@
+![icon](../../images/method_icons/discord.png "icon")
 # Discord-based methods
 
 ## Matrix Profile
+
+This method calculates as anomaly the subsequence with the most significant 1-Nearest-Neighbor (1-NN) distance.
 
 ### Example
 
@@ -21,6 +24,9 @@ name = filepath.split('/')[-1]
 
 data = df[:,0].astype(float)
 label = df[:,1].astype(int)
+
+#Pre-processing
+slidingWindow = find_length(data)
 
 # Run MatrixProfile
 modelName='MatrixProfile'
@@ -61,6 +67,8 @@ Affiliation_Recall : 0.9720951147963328
 
 ## DAMP
 
+This method is a scalable matrix Profile-based approach proposed to solves the twin-freak problem.
+
 ### Example
 
 ```python
@@ -80,6 +88,9 @@ name = filepath.split('/')[-1]
 
 data = df[:,0].astype(float)
 label = df[:,1].astype(int)
+
+#Pre-processing
+slidingWindow = find_length(data)
 
 # Run DAMP
 modelName='DAMP'
