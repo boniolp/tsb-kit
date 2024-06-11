@@ -21,7 +21,7 @@ Welcome to TSB-kit's documentation!
 Overview
 --------
 
-TSB-kit is a library of univariate time-series anomaly detection methods from the `TSB_UAD benchmark <https://github.com/TheDatumOrg/TSB-UAD>`_. Overall, TSB-kit contains 14 anomaly detection methods, and 15 evaluation measures. TSB-kit is part of a lrger project called TSB-UAD. The latter provides several time series anomaly detection datasets:
+TSB-kit is a library of univariate time-series anomaly detection methods from the `TSB_UAD benchmark <https://github.com/TheDatumOrg/TSB-UAD>`_. Overall, TSB-kit contains 14 anomaly detection methods, and 15 evaluation measures. TSB-kit is part of a larger project called TSB-UAD. The latter provides several time series anomaly detection datasets that can be found here:
 
 1. `Real data <https://www.thedatum.org/datasets/TSB-UAD-Public.zip>`_
 2. `Synthetic <https://www.thedatum.org/datasets/TSB-UAD-Synthetic.zip>`_

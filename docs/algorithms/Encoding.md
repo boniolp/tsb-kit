@@ -3,7 +3,7 @@
 
 ## Principal Component Analysis-based Anomaly Detection (PCA)
 
-The first encoding-based approach is to encode and represent the time series with its principal components. Principal Components Analysis (PCA) [Snyder and Withers 1983] investigates the major components of the time series that contribute the most to the covariance structure. The anomaly score is measured by the sub-sequences distance from 0 along the principal components weighted by their eigenvalues. Please see [Aggarwal 2015] for mre details.
+The first encoding-based approach is to encode and represent the time series with its principal components. Principal Components Analysis (PCA) investigates the major components of the time series that contribute the most to the covariance structure. The anomaly score is measured by the sub-sequences distance from 0 along the principal components weighted by their eigenvalues. Please see [Aggarwal 2015] for mre details.
 
 
 The TSB-kit implementation of PCA is adapted from [PyOD implementation](https://pyod.readthedocs.io/en/latest/) [Zhao et al. 2019].
@@ -79,11 +79,10 @@ Affiliation_Recall : 0.9982808225194953
 
 ### References
 
-[Aggarwal 2015] Charu C Aggarwal. Outlier analysis. In Data mining, 75–79. Springer, 2015.
+* [Aggarwal 2015] Charu C Aggarwal. Outlier analysis. In Data mining, 75–79. Springer, 2015.
 
-[Zhao et al. 2019] Zhao, Yue, Zain Nasrullah and Zheng Li. PyOD: A Python Toolbox for Scalable Outlier Detection. J. Mach. Learn. Res. 20,2019.
-
-[Snyder and Withers 1983] 
+* [Zhao et al. 2019] Zhao, Yue, Zain Nasrullah and Zheng Li. PyOD: A Python Toolbox for Scalable Outlier Detection. J. Mach. Learn. Res. 20,2019.
+ 
 
 ## Polynomial Approximation (POLY)
 
@@ -164,6 +163,6 @@ Affiliation_Recall : 0.9999934905686477
 
 ### References
 
-[Li et al. 2007] Z. Li, H. Ma, and Y. Mei. 2007. A unifying method for outlier and change detection from data streams based on local polynomial fitting. In Z.-H. Zhou, H. Li, and Q. Yang, eds., Advances in Knowledge Discovery and Data Mining, pp. 150–161. Springer Berlin Heidelberg, Berlin, Heidelberg. ISBN 978-3-540-71701-0.
+* [Li et al. 2007] Z. Li, H. Ma, and Y. Mei. 2007. A unifying method for outlier and change detection from data streams based on local polynomial fitting. In Z.-H. Zhou, H. Li, and Q. Yang, eds., Advances in Knowledge Discovery and Data Mining, pp. 150–161. Springer Berlin Heidelberg, Berlin, Heidelberg. ISBN 978-3-540-71701-0.
 
-[Bollerslev 1986] Tim Bollerslev, Generalized autoregressive conditional heteroskedasticity, Journal of Econometrics, Volume 31, Issue 3, 1986, ISSN 0304-4076.
+* [Bollerslev 1986] Tim Bollerslev, Generalized autoregressive conditional heteroskedasticity, Journal of Econometrics, Volume 31, Issue 3, 1986, ISSN 0304-4076.

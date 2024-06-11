@@ -78,7 +78,7 @@ Affiliation_Recall : 0.978882103900466
 
 ### References
 
-- [Breunig et al. 2000] M. M. Breunig, H.-P. Kriegel, R. T. Ng, and J. Sander. 2000b. Lof: identifying density-based local outliers. In Proceedings of the 2000 ACM SIGMOD international conference on Management of data, pp. 93–104.
+* [Breunig et al. 2000] M. M. Breunig, H.-P. Kriegel, R. T. Ng, and J. Sander. 2000b. Lof: identifying density-based local outliers. In Proceedings of the 2000 ACM SIGMOD international conference on Management of data, pp. 93–104.
 
-- [Hawkins 1980] D. M. Hawkins. 1980. Identification of Outliers. Springer Netherlands, Dordrecht.
+* [Hawkins 1980] D. M. Hawkins. 1980. Identification of Outliers. Springer Netherlands, Dordrecht.
 

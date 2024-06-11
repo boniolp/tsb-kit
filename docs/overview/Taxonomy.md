@@ -1,6 +1,6 @@
 # Anomaly Detection Taxonomy
 
-We divide methods into three categories: (i) distance-based, (ii) density-based, and (iii) prediction-based. Figure 5 illustrates our proposed process-centric taxonomy. (Note that the second-level categorization is not mutually exclusive; e.g., a  model might encode the time series data while adopting a discord-based identification strategy.)
+We divide methods into three categories: (i) distance-based, (ii) density-based, and (iii) prediction-based. The figure below illustrates our proposed process-centric taxonomy. (Note that the second-level categorization is not mutually exclusive; e.g., a  model might encode the time series data while adopting a discord-based identification strategy.)
 
 ![Anomaly detection taxonomy](../../images/taxonomy_short.png "Anomaly detection taxonomy")
 

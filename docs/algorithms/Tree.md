@@ -83,4 +83,4 @@ Affiliation_Recall : 0.9809813654809071
 
 ### References
 
-[Liu et al. 2008] F. T. Liu, K. M. Ting, and Z.-H. Zhou. 2008. Isolation Forest. In Proceedings of the International Conference on Data Mining (ICDM), pp. 413–422. IEEE. ISBN 978-0-7695-3502-9. DOI:10.1109/ICDM.2008.17.
+* [Liu et al. 2008] F. T. Liu, K. M. Ting, and Z.-H. Zhou. 2008. Isolation Forest. In Proceedings of the International Conference on Data Mining (ICDM), pp. 413–422. IEEE. ISBN 978-0-7695-3502-9. DOI:10.1109/ICDM.2008.17.

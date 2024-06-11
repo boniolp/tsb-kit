@@ -147,10 +147,10 @@ To conlcude, a large taxonomy of evaluation measures both generic and proposed f
 
  ## References
 
-[Tatbul et al. 2018] N. Tatbul, T.J. Lee, S. Zdonik, M. Alam, J. Gottschlich, in Advances in Neural Information Processing Systems, vol. 31
+* [Tatbul et al. 2018] N. Tatbul, T.J. Lee, S. Zdonik, M. Alam, J. Gottschlich, in Advances in Neural Information Processing Systems, vol. 31
 
-[Huet et al. 2022] Alexis Huet, Jose Manuel Navarro, and Dario Rossi. 2022. Local Evaluation of Time Series Anomaly Detection Algorithms. In Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD '22).
+* [Huet et al. 2022] Alexis Huet, Jose Manuel Navarro, and Dario Rossi. 2022. Local Evaluation of Time Series Anomaly Detection Algorithms. In Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD '22).
 
-[Paparrizos et al. 2022] John Paparrizos, Paul Boniol, Themis Palpanas, Ruey S. Tsay, Aaron Elmore, and Michael J. Franklin. 2022. Volume under the surface: a new accuracy evaluation measure for time-series anomaly detection. Proc. VLDB Endow. 15, 11 (July 2022), 2774–2787.
+* [Paparrizos et al. 2022] John Paparrizos, Paul Boniol, Themis Palpanas, Ruey S. Tsay, Aaron Elmore, and Michael J. Franklin. 2022. Volume under the surface: a new accuracy evaluation measure for time-series anomaly detection. Proc. VLDB Endow. 15, 11 (July 2022), 2774–2787.
 
-[Sorbo and Ruocco 2024] Sørbø, S., Ruocco, M. Navigating the metric maze: a taxonomy of evaluation metrics for anomaly detection in time series. Data Min Knowl Disc 38, 1027–1068 (2024). https://doi.org/10.1007/s10618-023-00988-8
+* [Sorbo and Ruocco 2024] Sørbø, S., Ruocco, M. Navigating the metric maze: a taxonomy of evaluation metrics for anomaly detection in time series. Data Min Knowl Disc 38, 1027–1068 (2024). https://doi.org/10.1007/s10618-023-00988-8

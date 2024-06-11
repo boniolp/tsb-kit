@@ -58,7 +58,7 @@ for metric in results.keys():
 
 ### References
 
-[Goldstein et al. 2012] Goldstein, Markus and Andreas R. Dengel. “Histogram-based Outlier Score (HBOS): A fast Unsupervised Anomaly Detection Algorithm.” (2012).
+* [Goldstein et al. 2012] Goldstein, Markus and Andreas R. Dengel. “Histogram-based Outlier Score (HBOS): A fast Unsupervised Anomaly Detection Algorithm.” (2012).
 
 
 ## One-Class Support Vector Machine (OCSVM)
@@ -145,8 +145,8 @@ Affiliation_Recall : 0.9970749874410433
 
 ### References
 
-[Schölkopf et al. 1999] B. Sch ̈olkopf, R. C. Williamson, A. Smola, J. Shawe-Taylor, and J. Platt. 1999. Support vector method for novelty detection. NeurIPS, 12.
+* [Schölkopf et al. 1999] B. Sch ̈olkopf, R. C. Williamson, A. Smola, J. Shawe-Taylor, and J. Platt. 1999. Support vector method for novelty detection. NeurIPS, 12.
 
-[Tax and Duin 2004] D. M. Tax and R. P. Duin. 2004. Support vector data description. Machine learning, 54(1): 45–66.
+* [Tax and Duin 2004] D. M. Tax and R. P. Duin. 2004. Support vector data description. Machine learning, 54(1): 45–66.
 
-[Hearst et al. 1998] M. A. Hearst, S. T. Dumais, E. Osuna, J. Platt, and B. Scholkopf. July 1998. Support vector machines. IEEE Intelligent Systems and their Applications, 13(4): 18–28. ISSN 1094-7167. DOI: 10.1109/5254.708428
+* [Hearst et al. 1998] M. A. Hearst, S. T. Dumais, E. Osuna, J. Platt, and B. Scholkopf. July 1998. Support vector machines. IEEE Intelligent Systems and their Applications, 13(4): 18–28. ISSN 1094-7167. DOI: 10.1109/5254.708428

@@ -82,11 +82,11 @@ Affiliation_Recall : 0.9836496679878174
 
 ### References
 
-[Hochreiter and Schmidhuber 1997] S. Hochreiter and J. Schmidhuber. Nov. 1997. Long short-term memory. Neural Comput., 9(8): 1735–1780.
+* [Hochreiter and Schmidhuber 1997] S. Hochreiter and J. Schmidhuber. Nov. 1997. Long short-term memory. Neural Comput., 9(8): 1735–1780.
 
-[Filonov et al. 2016] P. Filonov, A. Lavrentyev, and A. Vorontsov. 2016. Multivariate industrial time series with cyber-attack simulation: Fault detection using an lstm-based predictive data model. arXiv preprint arXiv:1612.06676.
+* [Filonov et al. 2016] P. Filonov, A. Lavrentyev, and A. Vorontsov. 2016. Multivariate industrial time series with cyber-attack simulation: Fault detection using an lstm-based predictive data model. arXiv preprint arXiv:1612.06676.
 
-[Malhotra et al. 2015] P. Malhotra, L. Vig, G. Shroff, P. Agarwal, et al. 2015. Long short term memory networks for anomaly detection in time series. In Esann, volume 2015, p. 89.
+* [Malhotra et al. 2015] P. Malhotra, L. Vig, G. Shroff, P. Agarwal, et al. 2015. Long short term memory networks for anomaly detection in time series. In Esann, volume 2015, p. 89.
 
 
 
@@ -169,4 +169,4 @@ Affiliation_Recall : 0.9900155246934222
 
 ### References
 
-[Munir et al. 2019] M. Munir, S. A. Siddiqui, A. Dengel, and S. Ahmed. 2019. DeepAnT: A Deep Learning Approach for Unsupervised Anomaly Detection in Time Series. 7: 1991–2005. ISSN 2169-3536. DOI:10.1109/ACCESS.2018.2886457.
+* [Munir et al. 2019] M. Munir, S. A. Siddiqui, A. Dengel, and S. Ahmed. 2019. DeepAnT: A Deep Learning Approach for Unsupervised Anomaly Detection in Time Series. 7: 1991–2005. ISSN 2169-3536. DOI:10.1109/ACCESS.2018.2886457.

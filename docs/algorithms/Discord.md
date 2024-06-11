@@ -77,11 +77,11 @@ Affiliation_Recall : 0.9720951147963328
 
 ### References
 
-[Yeh et al. 2016] C. Yeh, Y. Zhu, L. Ulanova, N. Begum, Y. Ding, H. Dau, D. Silva, A. Mueen, and E. Keogh. 2016a. Matrix profile I: all pairs similarity joins for time series: A unifying view that includes motifs, discords and shapelets. In ICDM.
+* [Yeh et al. 2016] C. Yeh, Y. Zhu, L. Ulanova, N. Begum, Y. Ding, H. Dau, D. Silva, A. Mueen, and E. Keogh. 2016a. Matrix profile I: all pairs similarity joins for time series: A unifying view that includes motifs, discords and shapelets. In ICDM.
 
-[Zhu et al. 2016] Y. Zhu, Z. Zimmerman, N. S. Senobari, C.-C. M. Yeh, G. Funning, A. Mueen, P. Brisk, and E. Keogh. 2016a. Matrix profile ii: Exploiting a novel algorithm and gpus to break the one hundred million barrier for time series motifs and joins. In 2016 IEEE 16th international conference on data mining (ICDM), pp. 739–748. IEEE.
+* [Zhu et al. 2016] Y. Zhu, Z. Zimmerman, N. S. Senobari, C.-C. M. Yeh, G. Funning, A. Mueen, P. Brisk, and E. Keogh. 2016a. Matrix profile ii: Exploiting a novel algorithm and gpus to break the one hundred million barrier for time series motifs and joins. In 2016 IEEE 16th international conference on data mining (ICDM), pp. 739–748. IEEE.
 
-[Mueen et al. 2017] A. Mueen, Y. Zhu, M. Yeh, K. Kamgar, K. Viswanathan, C. Gupta, and E. Keogh, August 2017. The fastest similarity search algorithm for time series subsequences under euclidean distance.
+* [Mueen et al. 2017] A. Mueen, Y. Zhu, M. Yeh, K. Kamgar, K. Viswanathan, C. Gupta, and E. Keogh, August 2017. The fastest similarity search algorithm for time series subsequences under euclidean distance.
 
 ## DAMP
 
@@ -159,4 +159,4 @@ Affiliation_Recall : 0.9999402806808003
 
 ### References
 
-[Lu et al. 2022] Y. Lu, R. Wu, A. Mueen, M. A. Zuluaga, and E. Keogh. 2022. Matrix profile xxiv: scaling time series anomaly detection to trillions of datapoints and ultra-fast arriving data streams. In SIGKDD, pp. 1173–1182.
+* [Lu et al. 2022] Y. Lu, R. Wu, A. Mueen, M. A. Zuluaga, and E. Keogh. 2022. Matrix profile xxiv: scaling time series anomaly detection to trillions of datapoints and ultra-fast arriving data streams. In SIGKDD, pp. 1173–1182.

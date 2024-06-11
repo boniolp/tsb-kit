@@ -61,9 +61,6 @@ class LOF(DetectorB):
           'russellrao', 'seuclidean', 'sokalmichener', 'sokalsneath',
           'sqeuclidean', 'yule']
 
-        See the documentation for scipy.spatial.distance for details on these
-        metrics:
-        http://docs.scipy.org/doc/scipy/reference/spatial.distance.html
     p : integer, optional (default = 2)
         Parameter for the Minkowski metric from
         sklearn.metrics.pairwise.pairwise_distances. When p = 1, this is

@@ -70,6 +70,6 @@ Affiliation_Recall : 0.9989565215573869
 
 ### References
 
-[Boniol and Palpanas 2020] Paul Boniol and Themis Palpanas. 2020. Series2Graph: graph-based subsequence anomaly detection for time series. Proc. VLDB Endow. 13, 12
+* [Boniol and Palpanas 2020] Paul Boniol and Themis Palpanas. 2020. Series2Graph: graph-based subsequence anomaly detection for time series. Proc. VLDB Endow. 13, 12
 
-[Schneider et al. 2021] J. Schneider, P. Wenig, and T. Papenbrock. 2021. Distributed detection of sequential anomalies in univariate time series. The VLDB Journal, 30(4): 579–602
+* [Schneider et al. 2021] J. Schneider, P. Wenig, and T. Papenbrock. 2021. Distributed detection of sequential anomalies in univariate time series. The VLDB Journal, 30(4): 579–602
