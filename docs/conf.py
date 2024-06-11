@@ -19,6 +19,7 @@ release = '0.0.4'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
+    'sphinx_math_dollar',
     'sphinx.ext.napoleon',
     'sphinx.ext.autodoc',
     'sphinx.ext.intersphinx',

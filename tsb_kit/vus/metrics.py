@@ -15,7 +15,53 @@ def generate_curve(label,score,slidingWindow):
     return Y, Z, X, X_ap, W, Z_ap,avg_auc_3d, avg_ap_3d
 
 
-def get_metrics(score, labels, metric='vus', slidingWindow=None):
+def get_metrics(score, labels, metric='vus', slidingWindow=5):
+    """Compute all (or some) evaluation measures for a given score and labels.
+    
+    Parameters
+    ----------
+    score : numpy array of shape (n_samples,)
+        The input score to evaluate.
+    labels : numpy array of shape (n_samples,)
+        the labels to compare the score with. It have to be composed of 0 and 1 (1 indicating if the point is an anomaly).
+    slidingWindow: int, 
+        Buffer length for Range-based AUC measures and for VUS-based measures. 
+        For Range-AUC, the buffer length 
+        is exactly equals to slidingWindow. For VUS-based measures, the buffer length varies from 0 to ``2*slidingWindow``.
+    metric : string, optional, default='vus'
+        compute a subset or all metrics:
+        
+        - if 'vus', compute and store in a dictionary the following measures (the string is the key of each measure). 
+
+            - 'R_AUC_ROC', Range-adapted version of AUC-ROC [Paparrizos et al. 2022]
+            - 'R_AUC_PR', Range-adapted version of AUC-PR [Paparrizos et al. 2022]
+            - 'VUS_ROC', Volume under the surface for ROC [Paparrizos et al. 2022]
+            - 'VUS_PR', Volume under the surface for PR [Paparrizos et al. 2022]
+
+        - if 'all', compute all measures and store them in a dictionary (the string is the key of each measure). The threhold based measures are computed with a predifined threshold (``score_mu + 3*score_sigma``). In total here are the measures:
+
+            - 'AUC_ROC', Area Under the ROC Curve
+            - 'AUC_PR', Area Under the Precision-Recall Curve
+            - 'Precision', generic Precision
+            - 'Recall', generic Recall
+            - 'F', generic F-score (with beta equals to 1)
+            - 'Precision_at_k', generic precision at k.
+            - 'Rprecision', Time series-adapted Precision [Tatbul et al. 2018].
+            - 'Rrecall', Time series-adapted Recall [Tatbul et al. 2018].
+            - 'RF', Time series-adapted F-score (with beta equals to 1) [Tatbul et al. 2018].
+            - 'R_AUC_ROC', Range-adapted version of AUC-ROC [Paparrizos et al. 2022]
+            - 'R_AUC_PR', Range-adapted version of AUC-PR [Paparrizos et al. 2022]
+            - 'VUS_ROC', Volume under the surface for ROC [Paparrizos et al. 2022]
+            - 'VUS_PR', Volume under the surface for PR [Paparrizos et al. 2022]
+            - 'Affiliation_Precision', Affiliation-based precision [Huet et al. 2022]
+            - 'Affiliation_Recall', Affiliation-based recall [Huet et al. 2022]
+    
+    Returns
+    -------
+    metrics : dictionary
+        contains the accuracy values for all evaluation measures.
+    """
+
     metrics = {}
     if metric == 'vus':
         grader = metricor()

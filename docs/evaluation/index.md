@@ -3,6 +3,7 @@
 ```{toctree}
 :maxdepth: 2
 
+Introduction
 Threshold
 AUC
 VUS
