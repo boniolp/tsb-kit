@@ -4,7 +4,7 @@
 <h2 align="center">Univariate Time-Series Anomaly Detection algorithms from TSB-UAD benchmark</h2>
 <div align="center">
 <p>
-<img alt="PyPI - Downloads" src="https://pepy.tech/badge/tsb_kit"> <img alt="PyPI" src="https://img.shields.io/pypi/v/tsb-kit"> <img alt="GitHub issues" src="https://img.shields.io/github/issues/boniolp/tsb-kit"> <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/tsb-kit"> <img alt="ReadTheDocs Status" src="https://readthedocs.org/projects/tsb-kit/badge/?version=latest"> 
+<img alt="PyPI - Downloads" src="https://pepy.tech/badge/tsb_kit"> <img alt="PyPI" src="https://img.shields.io/pypi/v/tsb-kit"> <img alt="License" src="https://img.shields.io/github/license/boniolp/tsb-kit"> <img alt="GitHub issues" src="https://img.shields.io/github/issues/boniolp/tsb-kit"> <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/tsb-kit"> <img alt="ReadTheDocs Status" src="https://readthedocs.org/projects/tsb-kit/badge/?version=latest"> 
 </p>
 </div>
 
