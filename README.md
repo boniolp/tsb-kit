@@ -126,7 +126,7 @@ pip install .
 
 ## Anomaly Detectors
 
-We use 13 anomaly detection methods proposed for univariate time series. the following table lists and describes the methods considered in our benchmark:
+We use 14 anomaly detection methods proposed for univariate time series. the following table lists and describes the methods considered in our benchmark:
 
 <p align="center">
 <img width="1000" src="./images/taxonomy_short.png"/>

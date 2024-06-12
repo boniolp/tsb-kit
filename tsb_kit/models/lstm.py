@@ -122,7 +122,7 @@ class lstm:
         estimation = self.estimation
 
         for i in range(estimation.shape[0]):
-            score[i - estimation.shape[0]] = measure.measure(Y_test[i], estimation[i], n_test_ - estimation.shape[0] + i)
+            score[i - estimation.shape[0]] = measure.measure(Y_test[i], estimation[i], self.n_test_ - estimation.shape[0] + i)
 
         score[0: - estimation.shape[0]] = score[- estimation.shape[0]]
         
