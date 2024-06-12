@@ -40,9 +40,6 @@ TSB-kit is published to `PyPI <https://pypi.org>`_ and you can install it using:
 
    pip install tsb-kit
 
-.. attention::
-
-   Currently, TSB-kit is tested only with Python 3.8.
 
 Manual installation:
 
