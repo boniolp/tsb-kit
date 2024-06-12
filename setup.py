@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-__version__ = "0.0.5"
+__version__ = "0.0.6"
 
 CLASSIFIERS = [
     "Development Status :: 5 - Production/Stable",
@@ -13,6 +13,7 @@ CLASSIFIERS = [
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
     "Topic :: Scientific/Engineering :: Information Analysis",
     "Topic :: Scientific/Engineering :: Mathematics",
     "Topic :: Software Development :: Libraries :: Python Modules",
@@ -31,17 +32,17 @@ setup(
     url="https://github.com/boniolp/tsb-kit",
     entry_points={},
     install_requires=[
-        'numpy==1.24.3',
-        'matplotlib==3.7.5',
-        'pandas==2.0.3',
-        'arch==5.3.1',
-        'tsfresh==0.20.2',
-        'hurst==0.0.5',
-        'tslearn==0.6.3',
-        'cython==3.0.10',
-        'scikit-learn==1.3.2',
-        'stumpy==1.12.0',
-        'tensorflow==2.13.0',
-        'networkx==3.1',
+        'numpy>=1.24.3',
+        'matplotlib>=3.7.5',
+        'pandas>=2.0.3',
+        'arch>=5.3.1',
+        'tsfresh>=0.20.2',
+        'hurst>=0.0.5',
+        'tslearn>=0.6.3',
+        'cython>=3.0.10',
+        'scikit-learn>=1.3.2',
+        'stumpy>=1.12.0',
+        'tensorflow>=2.13.0',
+        'networkx>=3.1',
         ]
 )

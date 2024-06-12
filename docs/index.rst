@@ -34,7 +34,7 @@ Installation
 Quick start:
 
 
-TSB-kit is published to `PyPI <https://pypi.org>`_ and you can install it using:
+TSB-kit requires Python between 3.6 and 3.12. You can install it using:
 
 .. code-block:: bash
 
