@@ -72,6 +72,7 @@ pip install tsb-kit
 * Paul Boniol (Inria, ENS)
 * John Paparrizos (Ohio State University)
 * Emmanouil Sylligardos (Inria, ENS)
+* Ashwin Krishna (IIT Madras)
 * Yuhao Kang (University of Chicago)
 * Alex Wu (University of Chicago)
 * Teja Bogireddy (University of Chicago)
