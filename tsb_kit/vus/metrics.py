@@ -2,9 +2,12 @@ import numpy as np
 from .utils.metrics import metricor
 
 
-def generate_curve(label,score,slidingWindow):
-    tpr_3d, fpr_3d, prec_3d, window_3d, avg_auc_3d, avg_ap_3d = metricor().RangeAUC_volume(labels_original=label, score=score, windowSize=1*slidingWindow)
-
+def generate_curve(label,score,slidingWindow, version='opt', thre=250):
+    if version =='opt_mem':
+        tpr_3d, fpr_3d, prec_3d, window_3d, avg_auc_3d, avg_ap_3d = metricor().RangeAUC_volume_opt_mem(labels_original=label, score=score, windowSize=slidingWindow, thre=thre)
+    else:
+        tpr_3d, fpr_3d, prec_3d, window_3d, avg_auc_3d, avg_ap_3d = metricor().RangeAUC_volume_opt(labels_original=label, score=score, windowSize=slidingWindow, thre=thre)
+        
     X = np.array(tpr_3d).reshape(1,-1).ravel()
     X_ap = np.array(tpr_3d)[:,:-1].reshape(1,-1).ravel()
     Y = np.array(fpr_3d).reshape(1,-1).ravel()
@@ -15,7 +18,7 @@ def generate_curve(label,score,slidingWindow):
     return Y, Z, X, X_ap, W, Z_ap,avg_auc_3d, avg_ap_3d
 
 
-def get_metrics(score, labels, metric='vus', slidingWindow=5):
+def get_metrics(score, labels, metric='all', version='opt', slidingWindow=5, thre=250):
     """Compute all (or some) evaluation measures for a given score and labels.
     
     Parameters
@@ -28,6 +31,15 @@ def get_metrics(score, labels, metric='vus', slidingWindow=5):
         Buffer length for Range-based AUC measures and for VUS-based measures. 
         For Range-AUC, the buffer length 
         is exactly equals to slidingWindow. For VUS-based measures, the buffer length varies from 0 to ``2*slidingWindow``.
+    version : string, optional, default='opt'
+        Implementation of VUS.
+
+        - if 'opt', run the default implementation
+        - if 'opt_mem', run the optimized implementation, but more complex in memory
+
+    thre : int, optional, default=250
+        Number of thresholds for VUS
+
     metric : string, optional, default='vus'
         compute a subset or all metrics:
         
@@ -65,28 +77,42 @@ def get_metrics(score, labels, metric='vus', slidingWindow=5):
     metrics = {}
     if metric == 'vus':
         grader = metricor()
-        R_AUC_ROC, R_AUC_PR, _, _, _ = grader.RangeAUC(labels=labels, score=score, window=slidingWindow, plot_ROC=True)
-        _, _, _, _, _, _,VUS_ROC, VUS_PR = generate_curve(labels, score, 2*slidingWindow)
-        
-        metrics['R_AUC_ROC'] = R_AUC_ROC
-        metrics['R_AUC_PR'] = R_AUC_PR
+        _, _, _, _, _, _,VUS_ROC, VUS_PR = generate_curve(labels, score, slidingWindow, version, thre)
+
         metrics['VUS_ROC'] = VUS_ROC
         metrics['VUS_PR'] = VUS_PR
 
         return metrics
-    
-    elif metric == 'all' or metric != 'vus':
+
+    elif metric == 'range_auc':
         grader = metricor()
         R_AUC_ROC, R_AUC_PR, _, _, _ = grader.RangeAUC(labels=labels, score=score, window=slidingWindow, plot_ROC=True)
-        _, _, _, _, _, _,VUS_ROC, VUS_PR = generate_curve(labels, score, 2*slidingWindow)
-
         
+        metrics['R_AUC_ROC'] = R_AUC_ROC
+        metrics['R_AUC_PR'] = R_AUC_PR
+
+        return metrics
+
+    elif metric == 'auc':
+        
+        grader = metricor()
+        AUC_ROC = grader.metric_new_auc(labels, score, plot_ROC=False)
+        _, _, AUC_PR = grader.metric_PR(labels, score)
+
+        metrics['AUC_ROC'] = AUC_ROC
+        metrics['AUC_PR'] = AUC_PR
+
+        return metrics
+    
+    else :
         from .basic_metrics import basic_metricor
         
+        grader = metricor()
+        _, _, _, _, _, _,VUS_ROC, VUS_PR = generate_curve(labels, score, slidingWindow, version, thre)
+        R_AUC_ROC, R_AUC_PR, _, _, _ = grader.RangeAUC(labels=labels, score=score, window=slidingWindow, plot_ROC=True)
         grader = basic_metricor()
         AUC_ROC, Precision, Recall, F, Rrecall, ExistenceReward, OverlapReward, Rprecision, RF, Precision_at_k = grader.metric_new(labels, score, plot_ROC=False)
         _, _, AUC_PR = grader.metric_PR(labels, score)
-
 
         from .affiliation.generics import convert_vector_to_events
         from .affiliation.metrics import pr_from_events
@@ -96,7 +122,6 @@ def get_metrics(score, labels, metric='vus', slidingWindow=5):
         events_gt = convert_vector_to_events(labels)
         Trange = (0, len(discrete_score))
         affiliation_metrics = pr_from_events(events_pred, events_gt, Trange)
-
         metrics['AUC_ROC'] = AUC_ROC
         metrics['AUC_PR'] = AUC_PR
         metrics['Precision'] = Precision
@@ -112,7 +137,7 @@ def get_metrics(score, labels, metric='vus', slidingWindow=5):
         metrics['VUS_PR'] = VUS_PR
         metrics['Affiliation_Precision'] = affiliation_metrics['Affiliation_Precision']
         metrics['Affiliation_Recall'] = affiliation_metrics['Affiliation_Recall']
-
+        
         if metric == 'all':
             return metrics
         else:
