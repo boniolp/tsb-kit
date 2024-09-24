@@ -18,7 +18,13 @@ If you use TSB-kit in your project or research, cite the following two papers:
 
 ## Quick start
 
-You can install TSB-kit with pip (please read the installation section for more details).
+TSB-kit's last version is now included in TSB-UAD. You can now directly install tsb-uad with the following command:
+
+```
+pip install tsb-uad
+```
+
+The old package of TSB-kit can be installed as follows (please read the installation section for more details).
 
 ```
 pip install tsb-kit
